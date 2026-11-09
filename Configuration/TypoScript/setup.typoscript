@@ -1,9 +1,23 @@
 // use default/general ContainerProcessor
-tt_content.b13-2cols-with-header-container < lib.contentElement
-tt_content.b13-2cols-with-header-container {
-  templateName = 2ColsWithHeader
-  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+tt_content.b13-2cols < lib.contentElement
+tt_content.b13-2cols {
+  templateName = B13-2cols
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates/
   dataProcessing {
-    200 = B13\Container\DataProcessing\ContainerProcessor
+    // 100 = B13\Container\DataProcessing\ContainerProcessor
+    // 100 {
+    //   colPos = 100
+    //   as = children_100
+    // }
+    110 = B13\Container\DataProcessing\ContainerProcessor
+    110 {
+        colPos = 110
+        as = children_110
+    }
+    120 = B13\Container\DataProcessing\ContainerProcessor
+    120 {
+        colPos = 120
+        as = children_120
+    }
   }
 }
